@@ -1,0 +1,16 @@
+<!-- files.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Files</title>
+</head>
+<body>
+    <h1>Uploaded Files</h1>
+    <% files.forEach(function(file) { %>
+        <div>
+            <h2><%= file %></h2>
+            <img src="/file/<%= file %>" alt="<%= file %>" width="300">
+        </div>
+    <% }); %>
+</body>
+</html>
