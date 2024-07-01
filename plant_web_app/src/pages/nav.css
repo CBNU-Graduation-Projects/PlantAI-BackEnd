@@ -1,0 +1,86 @@
+.nav-container {
+    display: flex;
+    height: 60px;
+    align-items: center; 
+    padding: 10px 20px;
+    /* background-color: rgb(0, 56, 12); */
+    justify-content: space-between; 
+    box-shadow: 0px 5px 7px lightgrey;
+  }
+  
+  .logo-nav-img {
+    margin-left: 1%;
+    height: 60%;
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight : bold;
+    color:darkgreen;
+    margin: 0px 0px 0px 200px;
+  }
+
+  .links a {
+    text-decoration: none;
+  }
+
+  .links a:visited {
+    color: inherit;
+  }
+  
+  .links a:active {
+    color: teal;
+  }
+  
+  .links > * {
+    margin: 10px; /* 각 링크 요소 사이의 오른쪽 여백을 설정합니다. */
+  }
+
+  .links a:after{
+    display:block;
+    content: '';
+    border-bottom: solid 2px #36663570;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+
+  .links a:hover:after{
+    transform: scaleX(1);
+  }
+
+
+  .language-select{
+    margin-right: 10px;
+  }
+
+  
+  /* btn */
+
+  .login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #b1ca25f6, #0eb337);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 7px;
+    transition: background-color 0.3s;
+    font-weight : bold;
+    box-shadow: 0px 2px 5px lightgrey;
+}
+
+.login-btn a {
+  text-decoration: none;
+}
+
+.login-btn a:visited {
+  color: inherit;
+}
+
+.login-btn:hover {
+  background: darkgreen;
+  transition: background-color 0.3s;
+}

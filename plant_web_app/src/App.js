@@ -3,21 +3,24 @@ import {Route, Routes, Link} from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
-import Home from './pages/Home';
+import Diagonose from './pages/Diagonose';
 import Login from './pages/Login';
+import Nav from './pages/Nav';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+
 
 
 
 function App() {
   return (
     <div className="App">
-       <nav>
-      <Link to="/">Home</Link> | 
-      <button><Link to="/login"> 로그인 </Link></button>
-      </nav>
+      <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/diagonose" element={<Diagonose />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       
     </div>
