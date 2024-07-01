@@ -2,6 +2,7 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const cors = require('cors');  
 const upload = require('./PlantPicAdd');
 const listFilesInDirectory = require('./PlantPicShow');
 const deleteFile = require('./PlantPicDelete');
@@ -10,15 +11,13 @@ const modify = require('./PlantPicModify');
 const app = express();
 const PORT =  process.env.PORT || 4000;
 
-// 화면엔진은 ejs로 설정함.
-app.set("view engine", "ejs");
-
+app.use(cors()); 
 // uploads 디렉토리를 정적 파일로 제공
 app.use('/file', express.static(path.join(__dirname, 'uploads')));
 
 //-----------------기본 틀 불러오기 -------------------
 app.get("/", function (req, res) {
-  res.render("test", {});
+  console.log("root")
 });
 
 // -----------------파일 업로드하기 -------------------
