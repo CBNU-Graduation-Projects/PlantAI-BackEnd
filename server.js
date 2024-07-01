@@ -8,7 +8,7 @@ const deleteFile = require('./PlantPicDelete');
 const modify = require('./PlantPicModify');
 
 const app = express();
-const port = 3000;
+const PORT =  process.env.PORT || 4000;
 
 // 화면엔진은 ejs로 설정함.
 app.set("view engine", "ejs");
@@ -72,6 +72,6 @@ app.get('/file/:name', (req, res) => {
 });
 
 //서버 열었는지 여부 확인 가능.
-app.listen(port, () => {
-  console.log("http://localhost:", port);
+app.listen(PORT, () => {
+  console.log(`server on: http://localhost:${PORT}`);
 });
