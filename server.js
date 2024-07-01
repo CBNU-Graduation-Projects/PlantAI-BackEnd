@@ -11,6 +11,7 @@ const modify = require('./PlantPicModify');
 const app = express();
 const PORT =  process.env.PORT || 4000;
 
+// cors server - client 연결
 app.use(cors()); 
 // uploads 디렉토리를 정적 파일로 제공
 app.use('/file', express.static(path.join(__dirname, 'uploads')));
