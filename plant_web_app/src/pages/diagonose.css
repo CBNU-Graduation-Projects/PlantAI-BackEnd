@@ -1,0 +1,23 @@
+.file {
+    display: none;
+  }
+
+
+  .preview {
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 2px dashed #eee;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .preview:hover {
+    border-color: green;
+  }

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import './diagonose.css'
 
 const Diagonose = () => {
   const [files, setFiles] = useState([]);
+
+  //드래그앤드롭 여부확인
+  const [isActive, setActive] = useState(false);
 
   // Fetch files from server
   useEffect(() => {
@@ -46,6 +50,42 @@ const Diagonose = () => {
         alert(error.message);
       });
   };
+  const handleDragOver = (event) => {
+    event.preventDefault();
+    setActive(true);
+  };
+
+  const handleDragLeave = (event) => {
+    event.preventDefault();
+    setActive(false);
+  };
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    setActive(false);
+
+    const files = event.dataTransfer.files;
+    const formData = new FormData();
+    for (const file of files) {
+      formData.append('myFile', file);
+    }
+
+    fetch('/upload', {
+      method: 'POST',
+      body: formData,
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('File uploaded successfully.');
+        window.location.reload();
+      } else {
+        throw new Error('Could not upload the file.');
+      }
+    })
+    .catch(error => {
+      alert(error.message);
+    });
+  };
 
   return (
     <div>
@@ -54,8 +94,15 @@ const Diagonose = () => {
 
       <h2>Upload Picture</h2>
       <form action="/upload" method="post" encType="multipart/form-data">
-        <input type="file" name="myFile" />
+      <label className={`preview${isActive ? ' active' : ''}`}  // isActive 값에 따라 className 제어
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}
+      >
+        <input type="file" className="file" name="myFile" />
+        <p>클릭 또는 파일을 이곳에 놓아주세요</p>
         <input type="submit" value="Upload" />
+      </label>
       </form>
 
       <h2>Modify Picture</h2>
