@@ -22,6 +22,10 @@
     margin: 0px 0px 0px 200px;
   }
 
+  ol, ul, li {
+    list-style-type: none;
+}
+
   .links a {
     text-decoration: none;
   }

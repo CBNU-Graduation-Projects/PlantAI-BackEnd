@@ -8,11 +8,12 @@ const Nav = () => {
       {/* 임시로고 이미지 */}
       <img className="logo-nav-img" src ="https://www.cbnu.ac.kr/site/www/images/contents/cts596_img01.png" alt="plant_wep" />
       
-      <div className="links">
-        <Link to="/home">HOME</Link> 
-        <Link to="/Diagonose">DIAGNOSE</Link> 
-        <Link to="/Contact">CONTACT</Link>
-      </div>
+      <ul className='links'>
+        <li><Link to="/home">HOME</Link> </li>
+        <li> <Link to="/Diagonose">DIAGNOSE</Link> </li>
+        <li><Link to="/Contact">CONTACT</Link> </li>
+
+      </ul>
 
       <div className="language-select"> 
         <select>
