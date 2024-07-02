@@ -7,6 +7,10 @@ const Diagonose = () => {
   //드래그앤드롭 여부확인
   const [isActive, setActive] = useState(false);
 
+  // modify 또는 delete 폼 확인
+  const [showForm, setShowForm] = useState(false);
+  const [formType, setFormType] = useState('');
+
   // Fetch files from server
   useEffect(() => {
     fetch('/files')
@@ -87,6 +91,18 @@ const Diagonose = () => {
     });
   };
 
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const fileName = event.target.fileName.value;
+    
+    if (formType === 'modify') {
+      const formData = new FormData(event.target);
+      handleModifyFile(fileName, formData);
+    } else if (formType === 'delete') {
+      handleDeleteFile(fileName);
+    }
+  };
+
   return (
     <div>
       <h1>Welcome to the Test Page!</h1>
@@ -105,27 +121,29 @@ const Diagonose = () => {
       </label>
       </form>
 
-      <h2>Modify Picture</h2>
-      <form onSubmit={event => {
-        event.preventDefault();
-        const fileName = event.target.modifyFileName.value;
-        const formData = new FormData(event.target);
-        handleModifyFile(fileName, formData);
-      }}>
-        <input type="text" name="modifyFileName" placeholder="Enter file name to modify" />
-        <input type="file" name="myFile" />
-        <button type="submit">Modify</button>
-      </form>
 
-      <h2>Delete Picture</h2>
-      <form onSubmit={event => {
-        event.preventDefault();
-        const fileName = event.target.fileName.value;
-        handleDeleteFile(fileName);
-      }}>
-        <input type="text" name="fileName" placeholder="Enter file name" />
-        <button type="submit">Delete</button>
-      </form>
+      <h2>
+        <button onClick={() => {
+          setFormType('modify');
+          setShowForm(!showForm);
+        }}>
+          {showForm && formType === 'modify' ? 'Hide Modify Form' : 'Show Modify Form'}
+        </button>
+        <button onClick={() => {
+          setFormType('delete');
+          setShowForm(!showForm);
+        }}>
+          {showForm && formType === 'delete' ? 'Hide Delete Form' : 'Show Delete Form'}
+        </button>
+      </h2>
+
+      {showForm && (
+        <form onSubmit={handleFormSubmit}>
+          <input type="text" name="fileName" placeholder="Enter file name" required />
+          {formType === 'modify' && <input type="file" name="myFile" />}
+          <button type="submit">{formType === 'modify' ? 'Modify' : 'Delete'}</button>
+        </form>
+      )}
 
       <h2>Show Picture</h2>
       <div id="files">
