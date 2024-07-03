@@ -33,3 +33,10 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .upload-plant-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 170px; /* 원하는 간격으로 조정 가능 */
+  }

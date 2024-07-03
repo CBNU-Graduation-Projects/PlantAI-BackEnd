@@ -108,6 +108,8 @@ const Diagonose = () => {
       <h1>Welcome to the Test Page!</h1>
       <p>This is a test page for our Express application.</p>
 
+    <div className='upload-plant-container'>
+      <div className='upload-pic'>
       <h2>Upload Picture</h2>
       <form action="/upload" method="post" encType="multipart/form-data">
       <label className={`preview${isActive ? ' active' : ''}`}  // isActive 값에 따라 className 제어
@@ -144,6 +146,44 @@ const Diagonose = () => {
           <button type="submit">{formType === 'modify' ? 'Modify' : 'Delete'}</button>
         </form>
       )}
+      </div>
+      
+      <div className='plant-info'>
+      <h2>식물정보입력 칸</h2>
+      <form action="/submit_plant_info" method="POST">
+        <table>
+            <tbody>
+                <tr>
+                    <th>식물종류선택</th>
+                    <td>
+                        <select name="plant_type">
+                          {/* db에서 불러오는 형식으로 수정할것. */}
+                            <option value="1">토마토</option>
+                            <option value="2">파프리카</option>
+                            <option value="3">망고</option>
+                            <option value="4">포도</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>관수 주기 입력</th>
+                    <td><input type="text" name="watering"/></td>
+                </tr>
+                <tr>
+                    <th>광선량 입력</th>
+                    <td><input type="text" name="sunlight"/></td>
+                </tr>
+                <tr>
+                    <th>토양 환경 입력</th>
+                    <td><input type="text" name="soil_condition"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit">저장</button>
+       </form>
+      </div>
+      
+      </div>
 
       <h2>Show Picture</h2>
       <div id="files">
