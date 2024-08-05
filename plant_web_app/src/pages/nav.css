@@ -1,11 +1,23 @@
 .nav-container {
-    display: flex;
+    /* display: flex;
     height: 60px;
-    align-items: center; 
     padding: 10px 20px;
-    /* background-color: rgb(0, 56, 12); */
-    justify-content: space-between; 
-    box-shadow: 0px 5px 7px lightgrey;
+    justify-content: space-between; */
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 80px;
+    justify-content: center;
+    overflow: visible;
+    padding: 0 16px;
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 5px 7px lightgrey; 
+    background-color:#224433;
   }
   
   .logo-nav-img {
@@ -16,9 +28,11 @@
   .links {
     display: flex;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight : bold;
-    color:darkgreen;
+    font-weight: 500;
+    letter-spacing:1px;
+    font-size: 16px;
+    line-height: 24px;
+    color:#ffffff;
     margin: 0px 0px 0px 200px;
   }
 
@@ -35,7 +49,7 @@
   }
   
   .links a:active {
-    color: teal;
+    color: rgb(177, 252, 3);
   }
   
   .links > * {
@@ -45,7 +59,7 @@
   .links a:after{
     display:block;
     content: '';
-    border-bottom: solid 2px #36663570;  
+    border-bottom: solid 2px rgb(177, 252, 3);  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
   }
@@ -73,7 +87,7 @@
     border-radius: 7px;
     transition: background-color 0.3s;
     font-weight : bold;
-    box-shadow: 0px 2px 5px lightgrey;
+    /* box-shadow: 0px 2px 5px lightgrey;/ */
 }
 
 .login-btn a {
@@ -85,6 +99,7 @@
 }
 
 .login-btn:hover {
-  background: darkgreen;
+  background: whitesmoke;
+  color :#224433;
   transition: background-color 0.3s;
 }

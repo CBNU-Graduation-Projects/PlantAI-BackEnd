@@ -9,9 +9,9 @@ const Nav = () => {
       <img className="logo-nav-img" src ="https://www.cbnu.ac.kr/site/www/images/contents/cts596_img01.png" alt="plant_wep" />
       
       <ul className='links'>
-        <li><Link to="/home">HOME</Link> </li>
-        <li> <Link to="/Diagonose">DIAGNOSE</Link> </li>
-        <li><Link to="/Contact">CONTACT</Link> </li>
+        <li><Link to="/home">Home</Link> </li>
+        <li> <Link to="/Diagonose">Diagonose</Link> </li>
+        <li><Link to="/Contact">Contact</Link> </li>
 
       </ul>
 
