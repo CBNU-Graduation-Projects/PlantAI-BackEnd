@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './diagonose.css'
 
 const Diagonose = () => {
@@ -104,9 +105,11 @@ const Diagonose = () => {
   };
 
   return (
+    
     <div>
       <h1>Welcome to the Test Page!</h1>
       <p>This is a test page for our Express application.</p>
+      <Link to="/Result" className="result-button"> 임시 결과화면 이동용 링크</Link>
 
     <div className='upload-plant-container'>
       <div className='upload-pic'>
