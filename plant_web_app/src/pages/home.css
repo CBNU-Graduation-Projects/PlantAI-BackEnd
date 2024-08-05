@@ -1,17 +1,44 @@
-.hello {
-    box-shadow: inset 0 -25px 0 #bfffa1;
+.neon {
+    box-shadow: inset 0 -25px 0 rgb(204, 255, 84);
     display: inline;
     line-height: 50px;
 }
 
-.container {
-    margin: 140px 0px 300px 0px;
+.header {
+    font-size: 57px;
+    line-height: 1.5
+}
+
+.rightalign {
+    text-align: right;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 120px;
+}
+
+.container 
+{
+    margin: 140px 15% 300px 15%;
     font-size: large;
     font-weight: 400;
     line-height: 20px;
 }
 
+.section
+{
+    margin-top: 150px;
+}
+
 .mainpage {
     text-align: left;
     margin: 120px 150px 150px 150px;
+}
+
+.sectiontitle {
+    text-align: start;
+}
+
+
+.sectiondescribe {
+    text-align: start;
 }

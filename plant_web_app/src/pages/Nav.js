@@ -1,17 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useActionData, useLocation } from 'react-router-dom';
 import './nav.css'
 
 const Nav = () => {
+  // 현재 페이지 상태를 나타내는 변수
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   return (
     <nav className="nav-container">
       {/* 임시로고 이미지 */}
       <img className="logo-nav-img" src ="https://www.cbnu.ac.kr/site/www/images/contents/cts596_img01.png" alt="plant_wep" />
       
       <ul className='links'>
-        <li><Link to="/home">Home</Link> </li>
-        <li> <Link to="/Diagonose">Diagonose</Link> </li>
-        <li><Link to="/Contact">Contact</Link> </li>
+        <li><Link to="/home" className={currentPath === "/home" ? "active" : ""}>Home</Link> </li>
+        <li> <Link to="/Diagonose" className={currentPath === "/Diagonose" ? "active" : ""}>Diagonose</Link> </li>
+        <li><Link to="/Contact" className={currentPath === "/Contact" ? "active" : ""}>Contact</Link> </li>
 
       </ul>
 

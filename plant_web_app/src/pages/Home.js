@@ -9,41 +9,55 @@ const Home = () => {
 
   return (
     <div className="container">
-      <header className="header">
-        <h1 className='hello'>식물상태 진단 시스템</h1>
-      </header>
       <section className="section">
-        <h2>소개</h2>
-        <p>
-          안녕하세요
-          ＜가제＞는 당신의 식물의 상태를 쉽고 빠르게 진단할 수 있도록 도와줍니다!
+        <h1 className='header neon'>Easily diagnose, <br /> your plant's health.</h1>
+        <h1 className='rightalign'>—Your growing guide to thriving greenery!</h1>
+      </section>
+      <section className="section">
+        <h2 className='sectiontitle'>Welcome to "Porototype"</h2>
+        <p className='sectiondescribe'>
+          Hello! ＜Prototype＞ is an innovative system designed to help you diagnose your plant’s health easily and quickly.
+          Utilizing the latest technology, this system analyzes photos of your plants to accurately assess their health condition.
+          Users can simply upload a photo and enter necessary data, and the system will provide an instant diagnosis of the plant’s health.
+          <br />
+          <br />Additionally, based on the diagnosis, it offers recommendations for necessary actions and provides useful tips and information for problem-solving. ＜Prototype＞ introduces a new approach to plant care, helping you maintain and enhance the health of your plants.
         </p>
       </section>
       <section className="section">
-        <h2>사용 방법</h2>
-        <p>
-          1. 식물의 사진을 업로드 합니다.<br />
-          2. 식물 데이터를 입력해주세요<br />
-          3. 사진을 분석하여 식물의 건강 상태를 진단합니다.<br />
-          4. 진단 결과를 확인하고, chatGPT를 통한 해결방법을 알아가세요!
+        <h2 className='sectiontitle'>How to Use</h2>
+        <p className='sectiondescribe'>
+          1. Upload a Photo of Your Plant<br />
+          Users start by uploading a photo of the plant they want to diagnose. Ensure the photo clearly shows the entire plant and any specific issues.<br />
+
+          2. Enter Plant Data<br />
+          Provide necessary information such as the plant type, location, and recent care details. This helps improve the accuracy of the diagnosis.<br />
+
+          3. Analyze the Photo to Diagnose the Plant’s Health<br />
+          The uploaded photo and entered data are analyzed by the system to assess the plant’s current health status. The diagnosis results are provided instantly.<br />
+
+          4. Review the Diagnosis Results and Explore Solutions with ChatGPT<br />
+          After reviewing the diagnosis results, you will receive recommendations for necessary actions and care tips. You can also use ChatGPT to explore additional solutions and gain useful information about plant care.<br />
+
+          5. Ongoing Monitoring and Updates<br />
+          Regularly monitor the plant’s condition and upload additional photos if needed to update its status. This allows you to continuously manage and improve the health of your plant.<br />
         </p>
       </section>
       <section className="section">
-        <h2>이 시스템을 사용해야하는 이유</h2>
+        <h2 className='sectiontitle'>이 시스템을 사용해야하는 이유</h2>
         <ul>
           <li>장점1</li>
           <li>장점2</li>
         </ul>
       </section>
       <section className="section">
-        <h2>자주 묻는 질문</h2>
+        <h2 className='sectiontitle'>자주 묻는 질문</h2>
         <h3>Q: 이 시스템은 무료인가요?</h3>
         <p>A: 네, 기본적인 진단 서비스는 무료로 제공됩니다.</p>
         <h3>Q: 어떤 식물들이 진단 가능한가요?</h3>
-        <p>A: 현재 지원 중인 식물은 토마토입니다.</p>
+        <p>A: 현재 지원 중인 식 물은 토마토입니다.</p>
       </section>
       <section className="section">
-        <h2>문의하기</h2>
+        <h2 className='sectiontitle'>문의하기</h2>
         <p>시스템에 대한 문의는 <Link to="/contact">여기</Link>로 연락해 주세요.</p>
       </section>
     </div>
