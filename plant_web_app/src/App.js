@@ -10,7 +10,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Result from './pages/Result';
-
+import Footer from './pages/Footer';
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
         <Route path="*" element={<NotFound />} />|
       </Routes>
-      
+      <Footer />
     </div>
   );
 }

@@ -13,8 +13,9 @@ const Home = () => {
         <h1 className='header neon'>Easily diagnose, <br /> your plant's health.</h1>
         <h1 className='rightalign'>—Your growing guide to thriving greenery!</h1>
       </section>
+      <hr />
       <section className="section">
-        <h2 className='sectiontitle'>Welcome to "Porototype"</h2>
+        <h2 className='sectiontitle'>Welcome to "Prototype"</h2>
         <p className='sectiondescribe'>
           Hello! ＜Prototype＞ is an innovative system designed to help you diagnose your plant’s health easily and quickly.
           Utilizing the latest technology, this system analyzes photos of your plants to accurately assess their health condition.
@@ -39,7 +40,7 @@ const Home = () => {
           After reviewing the diagnosis results, you will receive recommendations for necessary actions and care tips. You can also use ChatGPT to explore additional solutions and gain useful information about plant care.<br />
 
           5. Ongoing Monitoring and Updates<br />
-          Regularly monitor the plant’s condition and upload additional photos if needed to update its status. This allows you to continuously manage and improve the health of your plant.<br />
+          Regularly monitor the plant’s condition and upload additional photos if needed to update its status. This allows you to continuously manage and improve the health of your plant.
         </p>
       </section>
       <section className="section">

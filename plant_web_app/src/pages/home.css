@@ -6,7 +6,7 @@
 
 .header {
     font-size: 57px;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .rightalign {
@@ -27,6 +27,8 @@
 .section
 {
     margin-top: 150px;
+    margin-bottom: 150px;
+
 }
 
 .mainpage {
