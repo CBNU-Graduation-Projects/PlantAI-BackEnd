@@ -1,42 +1,63 @@
-.file {
-    display: none;
-  }
+.file-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between; /* 각 행의 항목들을 균등하게 분배 */
+  margin: 0;
+}
 
+.file-item {
+  flex: 1 0 calc(33.33% - 10px); /* 3개의 항목을 배치하되 간격을 고려 */
+  box-sizing: border-box;
+  max-width: calc(33.33% - 10px); /* 마지막 항목이 커지는 것을 방지 */
+}
 
-  .preview {
-    width: 300px;
-    height: 150px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 6px;
-    border: 2px dashed #eee;
-    padding: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
+.file-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
-  .preview:hover {
-    border-color: green;
-  }
+.preview {
+  width: 300px;
+  height: 150px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 2px dashed #eee;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-  #files {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  
-  #files > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.preview:hover {
+  border-color: green;
+}
 
-  .upload-plant-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 170px; /* 원하는 간격으로 조정 가능 */
-  }
+#files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#files > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plant-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 170px; /* 원하는 간격으로 조정 가능 */
+  background:  rgba(230, 230, 230, 0.3);
+  padding: 50px;
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
