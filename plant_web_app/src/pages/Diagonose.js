@@ -85,6 +85,7 @@ const Diagonose = () => {
     const files = event.dataTransfer.files;
     if (files.length >0){
       const file = files[0];
+      console.log(file);
       const fileURL = URL.createObjectURL(file);
       setpreviewURL(fileURL);
       localStorage.setItem('previewURL', fileURL);
@@ -176,12 +177,16 @@ const Diagonose = () => {
 
       <div>
       {/* 미리보기창  */}
-      {previewURL && (
+      <h2>업로드 이미지 미리보기</h2>
+        {previewURL ? (
             <div className="preview-container">
-              <h2>업로드 이미지 미리보기</h2>
-              <img src={previewURL} alt="미리보기" className="preview-image" />
+              <img src={previewURL} 
+              alt="미리보기" 
+              className="preview-image"
+              //초기 이미지 없을 때 및 에러처리
+              onError={(e)=>{e.target.style.display='none'}} />
             </div>
-          )}
+          ):null}
 
       <div className='plant-info'>
       <h2>식물정보입력 칸</h2>
