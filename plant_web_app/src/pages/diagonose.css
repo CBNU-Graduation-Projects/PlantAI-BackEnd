@@ -3,19 +3,41 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: space-between; /* 각 행의 항목들을 균등하게 분배 */
-  margin: 0;
+  margin: 50px 120px;
 }
 
 .file-item {
   flex: 1 0 calc(33.33% - 10px); /* 3개의 항목을 배치하되 간격을 고려 */
   box-sizing: border-box;
   max-width: calc(33.33% - 10px); /* 마지막 항목이 커지는 것을 방지 */
+  display: flex;
+  flex-direction: column; /* 세로로 정렬 */
+  align-items: center; /* 수평 가운데 정렬 */
+  text-align: center;
 }
 
 .file-item img {
-  width: 100%;
-  height: auto;
+  width: 300px; /* 고정 높이 설정 */
+  height: 300px; /* 고정 높이 설정 */
   object-fit: cover;
+  max-height: 300px;
+  max-width: 300px; 
+}
+
+.img-name {
+  margin-bottom: 42px;
+  font-size: 14px;
+  background: #e7e7e78c;
+  padding: 20px;
+  width: 20%; /* 부모의 너비에 맞추기 */
+  border-radius: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; /* 넘치는 텍스트 숨기기 */
+}
+
+.subtitle{
+  margin: 40px 0;
 }
 
 .preview {
@@ -72,3 +94,15 @@
   margin: 0 auto;
 }
 
+.img-name {
+  margin-bottom: 42px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  background: #e7e7e78c;
+  padding: 20px;
+  width: 60%;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
