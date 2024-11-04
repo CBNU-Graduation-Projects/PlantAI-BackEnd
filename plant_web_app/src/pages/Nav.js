@@ -10,7 +10,8 @@ const Nav = () => {
   return (
     <nav className="nav-container">
       {/* 임시로고 이미지 */}
-      <img className="logo-nav-img" src ="https://www.cbnu.ac.kr/site/www/images/contents/cts596_img01.png" alt="plant_wep" />
+      <h2 style={{ color: 'white' }}>Plantalyze</h2>
+      {/* <img className="logo-nav-img" src ="https://www.cbnu.ac.kr/site/www/images/contents/cts596_img01.png" alt="plant_wep" /> */}
       
       <ul className='links'>
         <li><Link to="/home" className={currentPath === "/home" ? "active" : ""}>Home</Link> </li>

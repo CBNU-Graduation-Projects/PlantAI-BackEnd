@@ -38,6 +38,7 @@
 
 .sectiontitle {
     text-align: start;
+    margin-bottom: 50px;
 }
 
 
@@ -45,4 +46,5 @@
     text-align: start;
     color: #777;
     font-style: italic;
+    line-height: 1.6; /* 줄 간격 조정 */
 }
